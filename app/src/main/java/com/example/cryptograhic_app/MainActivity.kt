@@ -1,11 +1,9 @@
 package com.example.cryptograhic_app
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.example.cryptograhic_app.databinding.ActivityMainBinding
-import java.util.logging.Handler
-import android.os.Handler as Handler1
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -16,7 +14,18 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        // setting listners
+        // setting Encryption listners
+            binding.Encrypt.onSwipedOnListener = {
+                val intent = Intent(this, MainActivityencryption :: class.java)
+                startActivity(intent)
+            }
+        //Decryption Listner
+            binding.Decrypt.onSwipedListener = {
+                val intent = Intent(this, MainActivitydecryption :: class.java)
+                startActivity(intent)
+        }
+
+
 
         }
     }
