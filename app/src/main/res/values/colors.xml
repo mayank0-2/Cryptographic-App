@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="Background">#5f9EA0</color>
-    <color name="buttonbackuncheck">#e36f5b</color>
-    <color name="buttonbackcheck">#7cf075</color>
+    <color name="Background">#c5d8db</color>
+    <color name="buttonbackuncheck">#dead87</color>
+    <color name="buttonbackcheck">#eb9654</color>
 </resources>
