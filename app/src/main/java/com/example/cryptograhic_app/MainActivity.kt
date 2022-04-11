@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        binding.Encrypt.setCheckedAnimated(false)
 
         // setting Encryption listners
             binding.Encrypt.onSwipedOnListener = {
