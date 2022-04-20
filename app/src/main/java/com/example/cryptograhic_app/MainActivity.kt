@@ -13,19 +13,25 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
         binding.Encrypt.setCheckedAnimated(false)
 
         // setting Encryption listners
+
             binding.Encrypt.onSwipedOnListener = {
                 val intent = Intent(this, MainActivityencryption :: class.java)
+//                intent.putExtra("key", binding.editTextTextPassword.toString())
                 startActivity(intent)
             }
         //Decryption Listner
+
             binding.Decrypt.onSwipedListener = {
                 val intent = Intent(this, MainActivitydecryption :: class.java)
+//                intent.putExtra("key", binding.editTextTextPassword.toString())
                 startActivity(intent)
         }
 
+        //To send key value to encryption activity
 
 
         }

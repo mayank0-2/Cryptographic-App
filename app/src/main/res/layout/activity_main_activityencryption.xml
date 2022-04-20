@@ -7,7 +7,7 @@
     tools:context=".MainActivityencryption">
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/textInput"
         android:layout_width="312dp"
         android:layout_height="55dp"
         android:layout_marginStart="99dp"
@@ -26,4 +26,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.372" />
+
+    <Button
+        android:id="@+id/encryptbutton"
+        android:layout_width="103dp"
+        android:layout_height="48dp"
+        android:text="Proceed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.661" />
 </androidx.constraintlayout.widget.ConstraintLayout>
