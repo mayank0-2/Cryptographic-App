@@ -45,6 +45,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.github.stfalcon:swipeable-button:0.1.0'
+    implementation 'com.lambdapioneer.argon2kt:argon2kt:1.3.0'
 
 
 }

@@ -10,6 +10,8 @@ import javax.crypto.Cipher
 import javax.crypto.KeyGenerator
 import javax.crypto.SecretKey
 import javax.crypto.spec.SecretKeySpec
+import com.lambdapioneer.argon2kt.Argon2Kt
+import com.lambdapioneer.argon2kt.Argon2Mode
 
 
 class MainActivityencryption : AppCompatActivity() {
@@ -21,10 +23,9 @@ class MainActivityencryption : AppCompatActivity() {
         setContentView(view1)
 
         // for recieving key value from previous activity
-//
-//        val p = intent.getStringExtra("key")!!.toByteArray()
-//        val key = SecretKeySpec(p, 0, 256, "AES")
 
+        val p = intent.getStringExtra("key")
+        val plaintext = binding1.textInput
 
         //for removing text from textinput
         binding1.textInput.setOnClickListener(View.OnClickListener {
@@ -34,16 +35,7 @@ class MainActivityencryption : AppCompatActivity() {
 
         // for encryption
         binding1.encryptbutton.setOnClickListener(View.OnClickListener {
-                val plaintext: ByteArray = binding1.textInput.toString().toByteArray()
-                val keygen = KeyGenerator.getInstance("AES")
-                keygen.init(256)
-                val key: SecretKey = keygen.generateKey()
-                val cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING")
-                cipher.init(Cipher.ENCRYPT_MODE, key)
-                val ciphertext: ByteArray = cipher.doFinal(plaintext)
-                val iv: ByteArray = cipher.iv
 
-            binding1.textInput.setText(ciphertext.toString())
         })
 
     //setting homepage default when we press back button
